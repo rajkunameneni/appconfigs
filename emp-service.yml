@@ -21,7 +21,7 @@ eureka:
    defaultZone: http://localhost:8761/eureka/  
 assignment-service:
   ribbon:
-   listOfServers: http://localhost:8083
+   listOfServers: http://localhost:8083,http://localhost:8083
 application:
   version: emp-service-v1
 
