@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: emp-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/empdb
+    username: root
+    password: Tech@2021*
+    
+  jpa:
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8084
+#Eureka
+eureka:
+ client:
+  service-url:
+   defaultZone: http://localhost:8761/eureka/  
+assignment-service:
+  ribbon:
+   listOfServers: http://localhost:8085,http://localhost:8083
+application:
+  version: emp-service-v1
+
